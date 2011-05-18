@@ -1,19 +1,25 @@
 <h1>Listing payments</h1>
+<% @user.each do |ui|%>
+<h2> <%= ui.username %> </h2>
 
-<table>
-  <tr>
-    <th>Username</th>
+<% @grouped.each do |uid, paym| %>
+  <%if uid==ui.id %>
+  <table>
+      <tr>
     <th>Sum</th>
     <th>Comment</th>
   </tr>
-<% @payments.each do |payment| %>
+  <% paym.each do |p| %>
+
   <tr> 
-    <td><%= payment.user.username %></td>
-    <td><%= payment.pay %></td>
-    <td><%= payment.comment %></td>
+    <td><%= p.pay %></td>
+    <td><%= p.comment %></td>
    </tr>
+  <% end %>
+  </table>
+  <% end %>
 <% end %>
-</table>
+<% end %>
 
 
 

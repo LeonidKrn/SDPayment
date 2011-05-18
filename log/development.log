@@ -6793,3 +6793,5 @@ Started GET "/payments" for 127.0.0.1 at 2011-05-18 18:11:53 +0400
   [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 161 LIMIT 1
 Rendered payments/index.html.erb within layouts/application (52.4ms)
 Completed 200 OK in 91ms (Views: 54.4ms | ActiveRecord: 24.6ms)
+  [1m[36mPayment Load (2.7ms)[0m  [1mSELECT "payments".* FROM "payments"[0m
+  [1m[35mPayment Load (2.0ms)[0m  SELECT "payments".* FROM "payments"

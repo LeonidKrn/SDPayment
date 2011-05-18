@@ -2,8 +2,9 @@ class PaymentsController < ApplicationController
   # GET /payments
   # GET /payments.xml
   def index
-    @payments = Payment.find(:all, :order=>"user_id")
-
+    @payments = Payment.find(:all)
+    @grouped = @payments.group_by(&:user_id)
+    @user=User.find(:all)
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @payments }
