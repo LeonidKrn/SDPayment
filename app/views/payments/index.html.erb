@@ -1,0 +1,20 @@
+<h1>Listing payments</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Sum</th>
+    <th>Comment</th>
+  </tr>
+<% @payments.each do |payment| %>
+  <tr> 
+    <td><%= payment.user.username %></td>
+    <td><%= payment.pay %></td>
+    <td><%= payment.comment %></td>
+   </tr>
+<% end %>
+</table>
+
+
+
+
